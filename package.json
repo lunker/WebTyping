@@ -1,0 +1,71 @@
+{
+  "name": "webtyping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "node_modules/.bin/webpack --config webpack.config.client.js --hot --watch",
+    "start:server": "node server/server.js",
+    "start:client": "",
+    "start:dev": "NODE_ENV=dev rm -rf ./public && npm-run-all --parallel webpack start:server ",
+    "start:prod": "NODE_ENV=prod rm -rf ./build && npm-run-all --serial start:server start:client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunker/WebTyping.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lunker/WebTyping/issues"
+  },
+  "homepage": "https://github.com/lunker/WebTyping#readme",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "lodash": "^4.17.5",
+    "moment": "^2.20.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-bootstrap": "^0.32.0",
+    "react-dates": "^16.2.1",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-with-styles": "^2.4.0",
+    "react-with-styles-interface-aphrodite": "^3.1.1",
+    "react-with-styles-interface-css": "^3.0.0",
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.77.2",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.4",
+    "start-server-webpack-plugin": "^2.2.1",
+    "url-loader": "^0.6.2",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.0.4",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "colors": "^1.1.2",
+    "css-loader": "^0.28.9",
+    "enzyme": "^3.3.0",
+    "enzyme-to-json": "^3.3.0",
+    "jest": "^22.0.5",
+    "react-addons-test-utils": "^15.6.2",
+    "react-hot-loader": "^3.1.3",
+    "react-jest": "^0.2.1",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
